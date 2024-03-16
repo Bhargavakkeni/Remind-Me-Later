@@ -1,0 +1,1089 @@
+2024-03-14 16:52:22,454-[ERROR] [Thread-1 (process_request_thread)] (log:241) Internal Server Error: /api/reminder
+Traceback (most recent call last):
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\api\views.py", line 14, in reminder
+    id = args[0]
+         ~~~~^^^
+IndexError: tuple index out of range
+2024-03-14 16:53:29,000-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 16:53:41,737-[INFO] [Thread-1 (process_request_thread)] (views:22) Post method is triggered Posting the data
+2024-03-14 16:53:41,739-[WARNING] [Thread-1 (process_request_thread)] (log:241) Bad Request: /api/reminder
+2024-03-14 16:54:03,679-[INFO] [Thread-1 (process_request_thread)] (views:17) GET method is triggered returning all reminders
+2024-03-14 16:54:03,820-[ERROR] [Thread-1 (process_request_thread)] (log:241) Internal Server Error: /api/reminder
+Traceback (most recent call last):
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: api_reminderdata
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\api\views.py", line 20, in reminder
+    return Response(serializer.data, status=status.HTTP_200_OK)
+                    ^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+           ^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: api_reminderdata
+2024-03-14 16:55:23,545-[INFO] [Thread-1 (process_request_thread)] (views:17) GET method is triggered returning all reminders
+2024-03-14 16:55:31,652-[INFO] [Thread-1 (process_request_thread)] (views:22) Post method is triggered Posting the data
+2024-03-14 16:55:31,658-[WARNING] [Thread-1 (process_request_thread)] (log:241) Bad Request: /api/reminder
+2024-03-14 16:56:51,845-[INFO] [Thread-1 (process_request_thread)] (views:22) Post method is triggered Posting the data
+2024-03-14 16:56:59,163-[INFO] [Thread-1 (process_request_thread)] (views:17) GET method is triggered returning all reminders
+2024-03-14 16:57:35,349-[INFO] [Thread-1 (process_request_thread)] (views:31) PUT method is triggerd updating the existing record
+2024-03-14 16:57:35,503-[ERROR] [Thread-1 (process_request_thread)] (log:241) Internal Server Error: /api/reminder/1
+Traceback (most recent call last):
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\api\views.py", line 32, in reminder
+    old_reminder = ReminderData.objects.filter(pk=id)
+                                                  ^^
+UnboundLocalError: cannot access local variable 'id' where it is not associated with a value
+2024-03-14 16:58:02,270-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 16:58:07,328-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 16:58:10,529-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 16:58:16,815-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 16:58:19,422-[ERROR] [Thread-1 (process_request_thread)] (log:241) Internal Server Error: /api/reminder/1
+Traceback (most recent call last):
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\api\views.py", line 16, in reminder
+    print(id)
+          ^^
+UnboundLocalError: cannot access local variable 'id' where it is not associated with a value
+2024-03-14 16:58:32,642-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 16:58:35,684-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 16:58:43,365-[ERROR] [Thread-1 (process_request_thread)] (log:241) Internal Server Error: /api/reminder/1
+Traceback (most recent call last):
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\api\views.py", line 16, in reminder
+    print(id)
+          ^^
+UnboundLocalError: cannot access local variable 'id' where it is not associated with a value
+2024-03-14 16:58:52,786-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 16:58:56,891-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 16:59:06,588-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 16:59:10,540-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 16:59:14,707-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 16:59:17,040-[INFO] [Thread-1 (process_request_thread)] (views:32) PUT method is triggerd updating the existing record
+2024-03-14 16:59:17,154-[ERROR] [Thread-1 (process_request_thread)] (log:241) Internal Server Error: /api/reminder/1
+Traceback (most recent call last):
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\api\views.py", line 36, in reminder
+    serializer.save()
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\serializers.py", line 993, in update
+    info = model_meta.get_field_info(instance)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\utils\model_meta.py", line 35, in get_field_info
+    opts = model._meta.concrete_model._meta
+           ^^^^^^^^^^^
+AttributeError: 'QuerySet' object has no attribute '_meta'
+2024-03-14 17:00:13,250-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 17:00:16,672-[INFO] [Thread-1 (process_request_thread)] (views:32) PUT method is triggerd updating the existing record
+2024-03-14 17:00:16,761-[ERROR] [Thread-1 (process_request_thread)] (log:241) Internal Server Error: /api/reminder/1
+Traceback (most recent call last):
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\api\views.py", line 36, in reminder
+    serializer.save()
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\serializers.py", line 993, in update
+    info = model_meta.get_field_info(instance)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\utils\model_meta.py", line 35, in get_field_info
+    opts = model._meta.concrete_model._meta
+           ^^^^^^^^^^^
+AttributeError: 'QuerySet' object has no attribute '_meta'
+2024-03-14 17:00:33,887-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 17:00:36,296-[INFO] [Thread-1 (process_request_thread)] (views:32) PUT method is triggerd updating the existing record
+2024-03-14 17:00:37,656-[INFO] [Thread-2 (process_request_thread)] (views:32) PUT method is triggerd updating the existing record
+2024-03-14 17:00:46,246-[INFO] [Thread-2 (process_request_thread)] (views:18) GET method is triggered returning all reminders
+2024-03-14 17:00:58,791-[INFO] [Thread-2 (process_request_thread)] (views:42) DELETE method is triggered deleting the record with id 1
+2024-03-14 17:01:05,075-[INFO] [Thread-2 (process_request_thread)] (views:18) GET method is triggered returning all reminders
+2024-03-14 17:01:09,423-[INFO] [Thread-2 (process_request_thread)] (views:18) GET method is triggered returning all reminders
+2024-03-14 17:01:26,966-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 17:01:36,821-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 17:02:05,859-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 17:02:14,401-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 17:02:25,933-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 17:02:31,218-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 17:02:35,377-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 17:02:52,161-[INFO] [Thread-1 (process_request_thread)] (views:24) Post method is triggered Posting the data
+2024-03-14 17:02:54,029-[INFO] [Thread-1 (process_request_thread)] (views:24) Post method is triggered Posting the data
+2024-03-14 17:02:55,871-[INFO] [Thread-1 (process_request_thread)] (views:24) Post method is triggered Posting the data
+2024-03-14 17:03:00,912-[INFO] [Thread-1 (process_request_thread)] (views:15) GET method is triggered returning all reminders
+2024-03-14 17:03:08,089-[INFO] [Thread-1 (process_request_thread)] (views:15) GET method is triggered returning all reminders
+2024-03-14 17:03:13,163-[INFO] [Thread-1 (process_request_thread)] (views:15) GET method is triggered returning all reminders
+2024-03-14 17:03:17,684-[INFO] [Thread-1 (process_request_thread)] (views:15) GET method is triggered returning all reminders
+2024-03-14 17:06:11,931-[INFO] [Thread-1 (process_request_thread)] (views:15) GET method is triggered returning all reminders
+2024-03-14 17:06:22,668-[INFO] [Thread-1 (process_request_thread)] (views:24) Post method is triggered Posting the data
+2024-03-14 17:06:22,669-[WARNING] [Thread-1 (process_request_thread)] (log:241) Bad Request: /api/reminder
+2024-03-14 17:06:33,496-[INFO] [Thread-1 (process_request_thread)] (views:33) PUT method is triggerd updating the existing record
+2024-03-14 17:06:33,683-[ERROR] [Thread-1 (process_request_thread)] (log:241) Internal Server Error: /api/reminder
+Traceback (most recent call last):
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\api\views.py", line 34, in reminder
+    old_reminder = ReminderData.objects.all().get(id=id)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+api.models.ReminderData.DoesNotExist: ReminderData matching query does not exist.
+2024-03-14 17:07:30,062-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 17:07:43,940-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 17:07:59,107-[INFO] [Thread-1 (process_request_thread)] (views:33) PUT method is triggerd updating the existing record
+2024-03-14 17:07:59,108-[WARNING] [Thread-1 (process_request_thread)] (log:241) Bad Request: /api/reminder
+2024-03-14 17:08:09,256-[INFO] [Thread-1 (process_request_thread)] (views:45) DELETE method is triggered deleting the record with id 0
+2024-03-14 17:08:09,341-[ERROR] [Thread-1 (process_request_thread)] (log:241) Internal Server Error: /api/reminder
+Traceback (most recent call last):
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\api\views.py", line 46, in reminder
+    reminder = ReminderData.objects.all().get(pk=id)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+api.models.ReminderData.DoesNotExist: ReminderData matching query does not exist.
+2024-03-14 17:08:24,724-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 17:08:27,867-[WARNING] [Thread-1 (process_request_thread)] (log:241) Bad Request: /api/reminder
+2024-03-14 17:08:36,523-[INFO] [Thread-1 (process_request_thread)] (views:15) GET method is triggered returning all reminders
+2024-03-14 17:08:44,807-[INFO] [Thread-1 (process_request_thread)] (views:15) GET method is triggered returning all reminders
+2024-03-14 17:08:44,882-[ERROR] [Thread-1 (process_request_thread)] (log:241) Internal Server Error: /api/reminder/5
+Traceback (most recent call last):
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\api\views.py", line 17, in reminder
+    reminder = ReminderData.objects.all().get(id=id)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+api.models.ReminderData.DoesNotExist: ReminderData matching query does not exist.
+2024-03-14 17:09:02,404-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 17:10:14,762-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 17:10:17,854-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 17:10:24,979-[INFO] [Thread-1 (process_request_thread)] (views:16) GET method is triggered returning all reminders
+2024-03-14 17:10:25,060-[ERROR] [Thread-1 (process_request_thread)] (log:241) Internal Server Error: /api/reminder/5
+Traceback (most recent call last):
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\api\views.py", line 18, in reminder
+    reminder = ReminderData.objects.all().get(id=id)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+api.models.ReminderData.DoesNotExist: ReminderData matching query does not exist.
+2024-03-14 17:10:45,482-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 17:10:49,524-[INFO] [Thread-1 (process_request_thread)] (views:16) GET method is triggered returning all reminders
+2024-03-14 17:10:49,623-[ERROR] [Thread-1 (process_request_thread)] (log:241) Internal Server Error: /api/reminder/5
+Traceback (most recent call last):
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\fields\__init__.py", line 2117, in get_prep_value
+    return int(value)
+           ^^^^^^^^^^
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'builtin_function_or_method'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\api\views.py", line 18, in reminder
+    reminder = ReminderData.objects.all().get(id=id)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\query.py", line 635, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\sql\query.py", line 1613, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\sql\query.py", line 1645, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\sql\query.py", line 1559, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\sql\query.py", line 1389, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\lookups.py", line 30, in __init__
+    self.rhs = self.get_prep_lookup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\lookups.py", line 364, in get_prep_lookup
+    return super().get_prep_lookup()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\lookups.py", line 88, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\fields\__init__.py", line 2119, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got <built-in function id>.
+2024-03-14 17:12:34,270-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 17:12:43,617-[INFO] [Thread-1 (process_request_thread)] (views:16) GET method is triggered returning all reminders
+2024-03-14 17:12:43,761-[ERROR] [Thread-1 (process_request_thread)] (log:241) Internal Server Error: /api/reminder/5
+Traceback (most recent call last):
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\fields\__init__.py", line 2117, in get_prep_value
+    return int(value)
+           ^^^^^^^^^^
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'builtin_function_or_method'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\api\views.py", line 18, in reminder
+    reminder = ReminderData.objects.all().get(id=id)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\query.py", line 635, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\sql\query.py", line 1613, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\sql\query.py", line 1645, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\sql\query.py", line 1559, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\sql\query.py", line 1389, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\lookups.py", line 30, in __init__
+    self.rhs = self.get_prep_lookup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\lookups.py", line 364, in get_prep_lookup
+    return super().get_prep_lookup()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\lookups.py", line 88, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\fields\__init__.py", line 2119, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got <built-in function id>.
+2024-03-14 17:13:13,502-[INFO] [Thread-1 (process_request_thread)] (views:16) GET method is triggered returning all reminders
+2024-03-14 17:13:13,566-[ERROR] [Thread-1 (process_request_thread)] (log:241) Internal Server Error: /api/reminder/5
+Traceback (most recent call last):
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\fields\__init__.py", line 2117, in get_prep_value
+    return int(value)
+           ^^^^^^^^^^
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'builtin_function_or_method'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\api\views.py", line 18, in reminder
+    reminder = ReminderData.objects.all().get(id=id)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\query.py", line 635, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\sql\query.py", line 1613, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\sql\query.py", line 1645, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\sql\query.py", line 1559, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\sql\query.py", line 1389, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\lookups.py", line 30, in __init__
+    self.rhs = self.get_prep_lookup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\lookups.py", line 364, in get_prep_lookup
+    return super().get_prep_lookup()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\lookups.py", line 88, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\fields\__init__.py", line 2119, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got <built-in function id>.
+2024-03-14 17:13:50,366-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 17:14:12,096-[INFO] [Thread-1 (process_request_thread)] (views:17) GET method is triggered returning all reminders
+2024-03-14 17:14:12,196-[ERROR] [Thread-1 (process_request_thread)] (log:241) Internal Server Error: /api/reminder/5
+Traceback (most recent call last):
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\api\views.py", line 19, in reminder
+    reminder = ReminderData.objects.all().get(id=id)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+api.models.ReminderData.DoesNotExist: ReminderData matching query does not exist.
+2024-03-14 17:14:40,149-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 17:14:57,106-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 17:15:01,439-[INFO] [Thread-1 (process_request_thread)] (views:18) GET method is triggered returning all reminders
+2024-03-14 17:15:01,515-[ERROR] [Thread-1 (process_request_thread)] (log:241) Internal Server Error: /api/reminder/5
+Traceback (most recent call last):
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\api\views.py", line 20, in reminder
+    reminder = ReminderData.objects.all().get(id=id)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+api.models.ReminderData.DoesNotExist: ReminderData matching query does not exist.
+2024-03-14 17:15:12,072-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 17:15:25,814-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 17:16:04,388-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 17:16:08,542-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 17:16:11,641-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 17:16:15,618-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 17:16:19,920-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 17:16:23,191-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 17:16:36,331-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 17:16:56,492-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 17:16:59,559-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 17:17:12,103-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 17:23:56,173-[WARNING] [Thread-1 (process_request_thread)] (log:241) Not Found: /api/reminder/5
+2024-03-14 17:24:08,132-[WARNING] [Thread-1 (process_request_thread)] (log:241) Not Found: /api/reminder/5
+2024-03-14 17:24:13,379-[INFO] [Thread-1 (process_request_thread)] (views:40) PUT method is triggerd updating the existing record
+2024-03-14 17:24:13,480-[ERROR] [Thread-1 (process_request_thread)] (log:241) Internal Server Error: /api/reminder
+Traceback (most recent call last):
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\api\views.py", line 41, in reminder
+    if(id==0):
+       ^^
+UnboundLocalError: cannot access local variable 'id' where it is not associated with a value
+2024-03-14 17:24:49,058-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 17:24:52,873-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 17:25:20,430-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 17:25:24,522-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 17:25:30,799-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 17:25:33,152-[ERROR] [Thread-1 (process_request_thread)] (log:241) Internal Server Error: /api/reminder
+Traceback (most recent call last):
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\api\views.py", line 14, in reminder
+    if(kwargs[id] >= 1):
+              ^^
+UnboundLocalError: cannot access local variable 'id' where it is not associated with a value
+2024-03-14 17:25:35,963-[ERROR] [Thread-1 (process_request_thread)] (log:241) Internal Server Error: /api/reminder
+Traceback (most recent call last):
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\api\views.py", line 14, in reminder
+    if(kwargs[id] >= 1):
+              ^^
+UnboundLocalError: cannot access local variable 'id' where it is not associated with a value
+2024-03-14 17:25:50,917-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 17:26:01,507-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 17:26:09,652-[ERROR] [Thread-1 (process_request_thread)] (log:241) Internal Server Error: /api/reminder
+Traceback (most recent call last):
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\api\views.py", line 14, in reminder
+    if(kwargs[id] >= 1):
+              ^^
+UnboundLocalError: cannot access local variable 'id' where it is not associated with a value
+2024-03-14 17:26:46,380-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 17:26:50,598-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 17:26:54,201-[ERROR] [Thread-1 (process_request_thread)] (log:241) Internal Server Error: /api/reminder
+Traceback (most recent call last):
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\api\views.py", line 14, in reminder
+    if(kwargs['id'] >= 1):
+       ~~~~~~^^^^^^
+KeyError: 'id'
+2024-03-14 17:27:16,338-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\api\views.py changed, reloading.
+2024-03-14 17:27:20,027-[INFO] [Thread-1 (process_request_thread)] (views:42) PUT method is triggerd updating the existing record
+2024-03-14 17:27:20,029-[WARNING] [Thread-1 (process_request_thread)] (log:241) Bad Request: /api/reminder
+2024-03-14 17:27:27,825-[WARNING] [Thread-1 (process_request_thread)] (log:241) Not Found: /api/reminder/5
+2024-03-14 17:28:03,326-[WARNING] [Thread-1 (process_request_thread)] (log:241) Not Found: /api/reminder/5
+2024-03-14 17:28:19,166-[INFO] [Thread-1 (process_request_thread)] (views:42) PUT method is triggerd updating the existing record
+2024-03-14 17:28:25,887-[INFO] [Thread-1 (process_request_thread)] (views:25) GET method is triggered returning all reminders
+2024-03-14 17:28:33,791-[INFO] [Thread-1 (process_request_thread)] (views:25) GET method is triggered returning all reminders
+2024-03-14 17:28:47,557-[INFO] [Thread-1 (process_request_thread)] (views:25) GET method is triggered returning all reminders
+2024-03-14 17:28:52,494-[WARNING] [Thread-1 (process_request_thread)] (log:241) Not Found: /api/reminder/5
+2024-03-14 17:28:59,606-[WARNING] [Thread-1 (process_request_thread)] (log:241) Not Found: /api/reminder/5/4
+2024-03-14 17:29:23,476-[INFO] [Thread-1 (process_request_thread)] (views:25) GET method is triggered returning all reminders
+2024-03-14 17:29:33,478-[INFO] [Thread-1 (process_request_thread)] (views:25) GET method is triggered returning all reminders
+2024-03-14 17:29:37,330-[WARNING] [Thread-1 (process_request_thread)] (log:241) Not Found: /api/reminder/5
+2024-03-14 17:29:46,915-[INFO] [Thread-1 (process_request_thread)] (views:33) Post method is triggered Posting the data
+2024-03-14 17:29:53,772-[INFO] [Thread-1 (process_request_thread)] (views:33) Post method is triggered Posting the data
+2024-03-14 17:30:16,588-[INFO] [Thread-1 (process_request_thread)] (views:42) PUT method is triggerd updating the existing record
+2024-03-14 17:30:24,623-[WARNING] [Thread-1 (process_request_thread)] (log:241) Not Found: /api/reminder/7
+2024-03-14 17:30:32,301-[INFO] [Thread-1 (process_request_thread)] (views:25) GET method is triggered returning all reminders
+2024-03-14 17:30:49,916-[WARNING] [Thread-1 (process_request_thread)] (log:241) Bad Request: /api/reminder
+2024-03-14 17:30:59,214-[INFO] [Thread-1 (process_request_thread)] (views:55) DELETE method is triggered deleting the record with id 4
+2024-03-14 17:38:21,516-[WARNING] [Thread-1 (process_request_thread)] (log:241) Bad Request: /api/reminder
+2024-03-14 17:38:26,613-[INFO] [Thread-1 (process_request_thread)] (views:25) GET method is triggered returning all reminders
+2024-03-15 17:22:07,916-[INFO] [MainThread] (autoreload:266) /usr/src/app/remind_me_later/settings.py changed, reloading.
+2024-03-15 17:22:41,681-[INFO] [MainThread] (autoreload:266) /usr/src/app/remind_me_later/settings.py changed, reloading.
+2024-03-15 17:22:50,176-[INFO] [MainThread] (autoreload:266) /usr/src/app/remind_me_later/settings.py changed, reloading.
+2024-03-15 17:23:31,765-[INFO] [MainThread] (autoreload:266) /usr/src/app/remind_me_later/settings.py changed, reloading.
+2024-03-15 17:23:35,814-[INFO] [MainThread] (autoreload:266) /usr/src/app/remind_me_later/settings.py changed, reloading.
+2024-03-15 17:30:06,287-[INFO] [MainThread] (autoreload:266) /usr/src/app/remind_me_later/settings.py changed, reloading.
+2024-03-15 17:36:31,146-[INFO] [MainThread] (autoreload:266) /usr/src/app/remind_me_later/settings.py changed, reloading.
+2024-03-15 17:36:33,827-[INFO] [MainThread] (autoreload:266) /usr/src/app/remind_me_later/settings.py changed, reloading.
+2024-03-15 23:45:05,409-[INFO] [Thread-1 (process_request_thread)] (views:25) GET method is triggered returning all reminders
+2024-03-15 23:45:05,766-[ERROR] [Thread-1 (process_request_thread)] (log:241) Internal Server Error: /api/reminder
+Traceback (most recent call last):
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedTable: relation "api_reminderdata" does not exist
+LINE 1: ...message", "api_reminderdata"."reminder_type" FROM "api_remin...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\api\views.py", line 31, in reminder
+    return Response(serializer.data, status=status.HTTP_200_OK)
+                    ^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+           ^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: relation "api_reminderdata" does not exist
+LINE 1: ...message", "api_reminderdata"."reminder_type" FROM "api_remin...
+                                                             ^
+
+2024-03-15 23:45:31,032-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\remind_me_later\settings.py changed, reloading.
+2024-03-15 23:45:55,409-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\remind_me_later\settings.py changed, reloading.
+2024-03-15 23:46:04,394-[INFO] [Thread-1 (process_request_thread)] (views:25) GET method is triggered returning all reminders
+2024-03-15 23:46:16,250-[INFO] [Thread-1 (process_request_thread)] (views:25) GET method is triggered returning all reminders
+2024-03-15 23:47:24,445-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\remind_me_later\settings.py changed, reloading.
+2024-03-15 23:48:06,711-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\remind_me_later\settings.py changed, reloading.
+2024-03-16 00:29:26,524-[INFO] [Thread-1 (process_request_thread)] (views:25) GET method is triggered returning all reminders
+2024-03-16 00:29:40,566-[INFO] [Thread-1 (process_request_thread)] (views:25) GET method is triggered returning all reminders
+2024-03-16 00:29:46,328-[INFO] [Thread-1 (process_request_thread)] (views:25) GET method is triggered returning all reminders
+2024-03-16 00:30:06,532-[ERROR] [Thread-2 (process_request_thread)] (exception:124) Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\allprojects\RemindMeLater\myenv\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2024-03-16 00:30:08,092-[WARNING] [Thread-2 (process_request_thread)] (log:241) Bad Request: /api/reminder
+2024-03-16 00:30:31,722-[INFO] [MainThread] (autoreload:266) D:\allprojects\RemindMeLater\remind_me_later\settings.py changed, reloading.
+2024-03-16 00:30:36,620-[INFO] [Thread-1 (process_request_thread)] (views:25) GET method is triggered returning all reminders
+2024-03-16 00:30:48,077-[INFO] [Thread-1 (process_request_thread)] (views:25) GET method is triggered returning all reminders
+2024-03-16 00:30:55,624-[INFO] [Thread-1 (process_request_thread)] (views:33) Post method is triggered Posting the data
+2024-03-16 00:31:01,086-[INFO] [Thread-1 (process_request_thread)] (views:25) GET method is triggered returning all reminders
+2024-03-16 00:31:17,968-[INFO] [Thread-1 (process_request_thread)] (views:25) GET method is triggered returning all reminders
