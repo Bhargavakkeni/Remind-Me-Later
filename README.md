@@ -71,7 +71,7 @@ Navigate to the project directory:
 cd Remind-Me-Later
 ```
 
-Run this commands one by one from root directory
+Run these commands one by one from root directory
 
 ```python
 pip install -r requirements.txt
@@ -98,7 +98,7 @@ docker run -p 8000:8000 remind-me-later
 
 <h3>Adding PostgreSQL database:</h3>
 
-You can PostgreSQL database by adding this DATABASES settings to remind_me_later.settings file
+You can add PostgreSQL database by adding this DATABASES settings to remind_me_later.settings file
 
 ```
 DATABASES = {
