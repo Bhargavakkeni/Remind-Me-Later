@@ -68,7 +68,7 @@ git clone https://github.com/Bhargavakkeni/Remind-Me-Later.git
 Navigate to the project directory:
 
 ```
-cd RemindMeLater
+cd Remind-Me-Later
 ```
 
 Run this commands one by one from root directory
