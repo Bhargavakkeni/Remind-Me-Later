@@ -96,3 +96,18 @@ docker run -p 8000:8000 remind-me-later
 ```
 
 
+<h3>Adding PostgreSQL database:</h3>
+
+You can PostgreSQL database by adding this DATABASES settings to remind_me_later.settings file
+
+```
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'your_db_name',
+        'USER' : 'your_user_name',
+        'PASSWORD' : 'your_password',
+        'HOST' : 'localhost'
+    }
+}
+```
